@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MusicPortal.Models.Music>
+
+@{
+    ViewData["Title"] = "viewaAll";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-md-4">
+
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://i.ytimg.com/vi/ucTg6rZJCu4/maxresdefault.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">@Html.DisplayFor(modelItem => item.Mtitle)</h4>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Mdate)</p>
+                    <a href="@Html.DisplayFor(modelItem => item.MLink)" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+        }
+        </div>
+</div>

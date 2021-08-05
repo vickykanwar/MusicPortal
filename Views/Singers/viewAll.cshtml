@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MusicPortal.Models.Singer>
+
+@{
+    ViewData["Title"] = "viewAll";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        { 
+        <div class="col-md-4">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://5.imimg.com/data5/ON/IT/ZV/SELLER-13014937/24131-1-singing-photos-500x500.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">@Html.DisplayFor(modelItem => item.UName)</h4>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Contact)</p>
+                    
+                </div>
+            </div>
+
+        </div>
+        }
+
+        </div>
+
+</div>
+
